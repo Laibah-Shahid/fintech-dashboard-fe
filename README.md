@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# 💳 FinConnect — Frontend (Subscription-Gated Fintech API Dashboard)
 
-## Project info
+**FinConnect** is a subscription-gated fintech API dashboard that allows developers to register, subscribe to a plan, and access a secure dashboard to interact with a suite of mock financial APIs. This repo contains the **frontend** of the application, built with modern web technologies including **React.js**, **Tailwind CSS**, **TypeScript**, and **shadcn/ui**.
 
-**URL**: https://lovable.dev/projects/7e72f18e-3266-49fa-ae5d-f3f8d68659ee
+---
 
-## How can I edit this code?
+## 🚀 Tech Stack
 
-There are several ways of editing your application.
+- **Library:** React.js
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/)
+- **Language:** TypeScript
+- **API Integration:** All features consume backend REST APIs (no mock logic in UI)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7e72f18e-3266-49fa-ae5d-f3f8d68659ee) and start prompting.
+## 📁 Features (Frontend)
 
-Changes made via Lovable will be committed automatically to this repo.
+- **🔐 Authentication**
+  - Registration (`/register`) with name, email, password
+  - Login (`/login`) with email, password
 
-**Use your preferred IDE**
+- **💳 Subscription Flow**
+  - Pricing page (`/pricing`) gated for users without subscription
+  - Subscribe or Cancel plan 
+  - Gated access to `/dashboard/*` unless subscription is active
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **📊 Dashboard Pages (Accessible post-subscription)**
+  - `/dashboard/balance` – View mock account balance
+  - `/dashboard/transfer` – Transfer funds between mock accounts
+  - `/dashboard/transactions` – View paginated transaction history
+  - `/dashboard/invoice` – Generate and download invoice for a date range
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **🛡️ Role-based Access (RBAC)**
+  - Developers access APIs and dashboard
+  - Admins access management features via protected routes
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7e72f18e-3266-49fa-ae5d-f3f8d68659ee) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
